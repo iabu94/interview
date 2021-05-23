@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="viewbag-viewdata-tempdate">
+  <ul>
+    <li>
+      ViewBag vs ViewData vs TempData
+      <ul>
+        <li>
+          ViewData and ViewBag are used for the same purpose of transfer data
+          from controller to view.
+        </li>
+        <li>
+          ViewData is a dictionary of objects and it is accessible by string as
+          key. Eg: ViewBag["Employee"].
+        </li>
+        <li>ViewBag is able to set and get value dynamically</li>
+        <li>
+          TempData is stored data just like live session for short time.
+          <br />
+          TempData keeps data for the time of HTTP Request. <br />
+          TempData helps us to transfer data between controllers or between
+          actions.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Comparison
+          <ul>
+            <li>
+              VD: It is Key-Value Dictionary collection. <br />
+              VB: It is a type object <br />
+              TD: It is Key-Value Dictionary collection
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

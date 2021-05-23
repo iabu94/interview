@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="ng-performance">
+  <ul>
+    <li>
+      First I need to analyze my application and figure out what the areas
+      performing slow.
+    </li>
+    <li>
+      I need to ensure the application follows a clean coding architecture.
+    </li>
+    <li>
+      We can use OnPush change detection strategy. This will update the DOM to
+      reflect the changes whenever the data changes.
+    </li>
+    <li>
+      We can use angular Pure Pipes instead of methods. These are used to format
+      data.
+    </li>
+    <li>
+      We can use Lazy Loading. Becuase in large enterprise applications, once
+      the main bundle starts to increase, the performance goes down. Because
+      every kilo bytes extra on the main bundle is contributing to slower. So,
+      With lazy loading, we can split our application to feature modules and
+      load them whenever it needed.
+    </li>
+    <li>
+      We can use Trackby efficiently in *ngFor directives. That's because, lets
+      say we are using a change detection strategy and we have the list of items
+      in thousands. If we use the *ngFor directive it will render the DOM
+      element for every iteration. But if the list is an observable, what will
+      happens is, if one item added to the list, the *ngFor loop runs and
+      re-render all the elements again. To reduce that we can use Trackby.
+    </li>
+    <li>
+      We can use Resolvers, which will load the next component only if the HTTP
+      call returns success. In case of error, it will not load the next
+      component and displays an error on an already loaded component.
+    </li>
+    <li>
+      It is always a good practice to unsubscribe from observables using the
+      OnDestroy lifecycle hook
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="singleton-scoped-transient">
+  <ul>
+    <li>
+      These 3 are define object creation process in ASP.NET MVC core DI when
+      multiple objects of the same type have to be injected
+    </li>
+    <li>
+      In transient, new object instances will be injected in a single request
+      and response. In other words to every controller and every service, a new
+      instance will be provided.
+    </li>
+    <li>
+      In scoped, the same object instance will be injected in a single request
+      and response.
+    </li>
+    <li>
+      In singleton, the same object will be injected across all requests and
+      responses. In this case one global instance of the object will be created.
+    </li>
+  </ul>
+</div>

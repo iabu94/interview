@@ -3,31 +3,7 @@
   <head>
     <title>Interview Questions and Answers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      #dotnet, #angular, #sql, #personal,
-      #project, #hr, #ef, .content {
-        display: none;
-        padding: 15px;
-        font-size: 20px;
-      }
-      .flex-container {
-        display: flex;
-        justify-content: center;
-        background-color: DodgerBlue;
-      }
-      .flex-container > button {
-        background-color: #f1f1f1;
-        width: 100px;
-        margin: 10px;
-        text-align: center;
-        line-height: 30px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h4 style="text-align: center">Interview Questions and Answers</h4>
@@ -45,32 +21,42 @@
     <div id="dotnet">
       <ul>
         <li>
-          <a href="#" onclick="popup('abstract-interface')">Abstract vs Interface</a>
+          <a href="#" onclick="load('dotnet', 'abstract-interface')"
+            >Abstract vs Interface</a
+          >
         </li>
         <li>
-          <a href="#" onclick="popup('access-modifiers')">Access Modifiers</a>
+          <a href="#" onclick="load('dotnet', 'access-modifiers')"
+            >Access Modifiers</a
+          >
         </li>
         <li>
-          <a href="#" onclick="popup('class-types')">Class Types (sealed, static)</a>
+          <a href="#" onclick="load('dotnet', 'class-types')"
+            >Class Types (sealed, static)</a
+          >
         </li>
-        <li><a href="#" onclick="popup('delegates')">Delegates</a></li>
-        <li><a href="#" onclick="popup('oop')">OOP Concepts in C#</a></li>
+        <li><a href="#" onclick="load('dotnet', 'delegates')">Delegates</a></li>
+        <li>
+          <a href="#" onclick="load('dotnet', 'oop')">OOP Concepts in C#</a>
+        </li>
       </ul>
       <h3>.Net Core</h3>
       <ul>
         <li>
-          <a href="#" onclick="popup('singleton-scoped-transient')"
+          <a href="#" onclick="load('dotnet', 'singleton-scoped-transient')"
             >Singleton vs Scoped vs Transient</a
           >
         </li>
         <li>
-          <a href="#" onclick="popup('exception-filter')">Exception Filter</a>
+          <a href="#" onclick="load('dotnet', 'exception-filter')"
+            >Exception Filter</a
+          >
         </li>
       </ul>
       <h3>MVC</h3>
       <ul>
         <li>
-          <a href="#" onclick="popup('viewbag-viewdata-tempdate')"
+          <a href="#" onclick="load('dotnet', 'viewbag-viewdata-tempdate')"
             >ViewBag vs ViewData vs TempData</a
           >
         </li>
@@ -79,23 +65,47 @@
 
     <div id="angular">
       <ul>
-        <li><a href="#" onclick="popup('why-angular')">Why Angular?</a></li>
-        <li><a href="#" onclick="popup('how-ng-works')">How does Angular works?</a></li>
-        <li><a href="#" onclick="popup('ng-directives')">Directives</a></li>
-        <li><a href="#" onclick="popup('ng-super')">Super</a></li>
-        <li><a href="#" onclick="popup('ng-performance')">How to improve the performance?</a></li>
-        <li><a href="#" onclick="popup('ng-modules-components-services')">Modules and Components and Services</a></li>
-        <li><a href="#" onclick="popup('ng-pipes')">PIPES</a></li>
-        <li><a href="#" onclick="popup('ng-component-data-passing')">How to pass data within components</a></li>
+        <li>
+          <a href="#" onclick="load('angular', 'why-angular')">Why Angular?</a>
+        </li>
+        <li>
+          <a href="#" onclick="load('angular', 'how-ng-works')"
+            >How does Angular works?</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="load('angular', 'ng-directives')">Directives</a>
+        </li>
+        <li><a href="#" onclick="load('angular', 'ng-super')">Super</a></li>
+        <li>
+          <a href="#" onclick="load('angular', 'ng-performance')"
+            >How to improve the performance?</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="load('angular', 'ng-modules-components-services')"
+            >Modules and Components and Services</a
+          >
+        </li>
+        <li><a href="#" onclick="load('angular', 'ng-pipes')">PIPES</a></li>
+        <li>
+          <a href="#" onclick="load('angular', 'ng-component-data-passing')"
+            >How to pass data within components</a
+          >
+        </li>
       </ul>
     </div>
 
     <div id="sql">
       <ul>
-        <li><a href="#" onclick="popup('indexes')">Indexes</a></li>
-        <li><a href="#" onclick="popup('views')">Views</a></li>
+        <li><a href="#" onclick="load('sql', 'indexes')">Indexes</a></li>
+        <li><a href="#" onclick="load('sql', 'views')">Views</a></li>
         <li>
-          <a href="#" onclick="popup('sp-fn-tr')">Stored Procedures vs Functions vs Triggers</a>
+          <a href="#" onclick="load('sql', 'sp-fn-tr')"
+            >Stored Procedures vs Functions vs Triggers</a
+          >
         </li>
       </ul>
     </div>
@@ -103,11 +113,8 @@
     <div id="personal" style="display: block">
       <ul>
         <li>
-          <a href="#" onclick="popup('tell-about-self')">Tell me about yourself</a>
-        </li>
-        <li>
-          <a href="#" onclick="popup('difficult-situation')"
-            >Difficult Situation Faced on Project</a
+          <a href="#" onclick="load('personal', 'tell-about-self')"
+            >Tell me about yourself</a
           >
         </li>
       </ul>
@@ -116,13 +123,19 @@
     <div id="project">
       <ul>
         <li>
-          <a href="#" onclick="popup('explain-project')">Explain the Project and Your Role</a>
+          <a href="#" onclick="load('project', 'explain-project')"
+            >Explain the Project and Your Role</a
+          >
         </li>
         <li>
-          <a href="#" onclick="popup('onion-architecture')">Onion Architecture</a>
+          <a href="#" onclick="load('project', 'onion-architecture')"
+            >Onion Architecture</a
+          >
         </li>
         <li>
-          <a href="#" onclick="popup('solid-principles')">SOLID Principles</a>
+          <a href="#" onclick="load('project', 'solid-principles')"
+            >SOLID Principles</a
+          >
         </li>
       </ul>
     </div>
@@ -130,10 +143,10 @@
     <div id="ef">
       <ul>
         <li>
-          <a href="#" onclick="popup('why-ef')">Why Entity Framework ?</a>
+          <a href="#" onclick="load('ef', 'why-ef')">Why Entity Framework ?</a>
         </li>
         <li>
-          <a href="#" onclick="popup('linq')">What is LINQ ?</a>
+          <a href="#" onclick="load('ef', 'linq')">What is LINQ ?</a>
         </li>
       </ul>
     </div>
@@ -141,872 +154,38 @@
     <div id="hr">
       <ul>
         <li>
-          <a href="#" onclick="popup('handle-team-conflicts')">How have you handled conflicts within a project team you are leading ?</a>
+          <a href="#" onclick="load('hr', 'handle-team-conflicts')"
+            >How have you handled conflicts within a project team you are
+            leading ?</a
+          >
         </li>
         <li>
-          <a href="#" onclick="popup('passionate-about')">What are you passionate about ?</a>
+          <a href="#" onclick="load('hr','passionate-about')"
+            >What are you passionate about ?</a
+          >
         </li>
         <li>
-          <a href="#" onclick="popup('why-want-to-work-here')">Why do you want to work here ?</a>
+          <a href="#" onclick="load('hr', 'why-want-to-work-here')"
+            >Why do you want to work here ?</a
+          >
         </li>
         <li>
-          <a href="#" onclick="popup('difficult-situation')">Difficult Situation Faced on Project</a>
+          <a href="#" onclick="load('hr', 'difficult-situation')"
+            >Difficult Situation Faced on Project</a
+          >
         </li>
-      </ul>
-    </div>
-
-    <div class="content" id="tell-about-self">
-      <ul>
-        <li>My calling name is Abdullah</li>
-        <li>I am from Kekirawa</li>
-        <li>
-          I am an Innovative Software Engineer with 2+ years of industry experience in developing
-          systems for multinational organizations in Sri Lanka and USA.
-        </li>
-        <li>
-          I Have a track record of working with large global teams to deliver scalable enterprise
-          solutions.
-        </li>
-        <li>I have completed my degree in University of Kelaniya</li>
-        <li>
-          and along with my degree I completed some other courses on Pluralsight and Udemy as well.
-        </li>
-        <li>
-          I am good team player and a quick learner and I have discovered this qualities during my
-          project works.
-        </li>
-        <li>Coding is my passion and coding is my hobby in these days.</li>
-        <li>============================================================</li>
-        <li>
-          I found this job that exaclty matches to my qualifications and I wanted to change my
-          career to a new environment.
-        </li>
-        <li>
-          And we have a phase 1 release by this month. So I thought this is the time for that.
-        </li>
-        <li>That's why I am here for this interview.</li>
-      </ul>
-    </div>
-
-    <div class="content" id="access-modifiers">
-      <ol>
-        <li>
-          Public <br />
-          There are no restrictions on accessing public members. The type/member are accessible for
-          all classes whether it is within the same assembly or another assembly that references it.
-        </li>
-        <li>
-          Private <br />
-          The type/member is only accessible within the same class. We cannot access those outside
-          the class. This is the default access modifier type if no modifier is specified.
-        </li>
-        <li>
-          Protected <br />
-          The type/member is accessible within the class definition and any class that inherits from
-          that class.
-        </li>
-        <li>
-          Internal <br />
-          The type/member can be accessed by any classes in the same assembly, but not from another
-          assembly.
-        </li>
-        <li>
-          Protected Internal <br />
-          The type/member can be accessed by any classes in the current assembly in which it's
-          declared, or from within a derived class in another assembly.
-        </li>
-        <li>
-          Private Protected <br />
-          The type/member can be accessed only within its declaring assembly, by code in the same
-          class or in a type that is derived from that class.
-        </li>
-      </ol>
-    </div>
-
-    <div class="content" id="class-types">
-      <ol>
-        <li>
-          Sealed Class <br />
-          It cannot be inherited from another class.
-        </li>
-        <li>
-          Static Class <br />
-          A static class in C# is a class that cannot be instantiated. A static class can only
-          contain static data members including static methods, static constructors, and static
-          properties. <br />
-          Those are useful and provide an easy way to access its members that does not need to work
-          differently for different objects.<br />
-          Eg: Math
-        </li>
-        <li>
-          Abstract Class<br />
-          An Abstract class that provides a common definition to the subclasses. <br />
-          This is a type of class whose object is not created.
-        </li>
-      </ol>
-    </div>
-
-    <div class="content" id="oop">
-      <ol>
-        <li>
-          Abstraction
-          <ul>
-            <li>
-              Abstraction means represent the essential feature without representing the background
-              details.
-            </li>
-            <li>In other words, what the object does instead of how it does it.</li>
-            <li>
-              It is the process of hiding the working style of an object, and showing the
-              information of an object in an understandable manner.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Encapsulation
-          <ul>
-            <li>
-              Encapsulation means Wrapping up a data member and a method together into a single unit
-              or a class.
-            </li>
-            <li>It is like enclosing in a capsule.</li>
-            <li>
-              That means enclosing the related operations and data related to an object into that
-              object.
-            </li>
-            <li>
-              Encapsulation is a technique used to protect the information in an object from another
-              object.
-            </li>
-            <li>We can use the get and set accessors to achive this</li>
-            <li>
-              For Ex: In a TV operation everything is private except the remote, so that anyone can
-              access the remote to operate and change the things in the TV.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Inheritance
-          <ul>
-            <li>
-              Means When a class includes a property of another class it is known as inheritance.
-              It's a process of object reusability.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Polymorphism
-          <ul>
-            <li>
-              Polymorphism means in simple words, one name, many forms. It can be achieved by method
-              overloading and overriding.
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-
-    <div class="content" id="abstract-interface">
-      <table>
-        <tr>
-          <th>Abstract</th>
-          <th>Interface</th>
-        </tr>
-        <tr>
-          <td>Contains both declaration and definition part.</td>
-          <td>Contains only a declaration part.</td>
-        </tr>
-        <tr>
-          <td>Can't do Multiple inheritance</td>
-          <td>Can do Multiple inheritance.</td>
-        </tr>
-        <tr>
-          <td>Do have Constructor</td>
-          <td>Don't have Constructor</td>
-        </tr>
-        <tr>
-          <td>Different access modifiers</td>
-          <td>Only public access modifier because everything in the interface is public.</td>
-        </tr>
-        <tr>
-          <td>In the performance perspective, abstract class is fast.</td>
-          <td>Because interface will take time to search actual method in the related class.</td>
-        </tr>
-        <tr>
-          <td>Contain methods, fields, constants, etc.</td>
-          <td>Contain only methods.</td>
-        </tr>
-        <tr>
-          <td>Can be fully, partially, or not implemented</td>
-          <td>Should be fully implemented.</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="content" id="onion-architecture">
-      <ul>
-        <li>
-          The main aim of onion-architecture is to address the challenges faced with other
-          architectures and to provide a solution for common problems like tight coupling and loose
-          coupling.
-        </li>
-        <li>
-          The overall usage of the Onion Architecture is to keep the business logic, data access
-          logic, and model in the middle of the application
-          <br />
-          and push the dependencies as far outward as possible means all coupling towards to center.
-        </li>
-        <li>
-          Layers
-          <ul>
-            <li>Domain Entities Layer: used to create a table in the database.</li>
-            <li>
-              Repository Layer: acts as an abstract layer between the data access and business
-              layer.
-            </li>
-            <li>Service Layer: the business logic for an entity.</li>
-            <li>
-              UI (Web/Unit Test) Layer: implementation of DI (Dependency Inversion) principle.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Advantages of Onion Architecture
-          <ul>
-            <li>Better maintainability as all the codes depend on layers or the center.</li>
-            <li>
-              Better testability as the unit test can be created for separate layers without an
-              effect of other modules of the application.
-            </li>
-            <li>
-              It develops a loosely coupled application as the outer layer of the application always
-              communicates with the inner layer via interfaces.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Tight Coupling
-          <ul>
-            <li>
-              When a class is dependent on a concrete dependency, it is called as tightly coupled to
-              that class.
-            </li>
-            <li>A tightly coupled object is dependent on another object;</li>
-            <li>
-              That means changing one object in a tightly coupled application, can be requires
-              changes to a number of other objects.
-            </li>
-            <li>
-              It is not difficult when an application is small but in an enterprise-level
-              application, it is too difficult to make the changes.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Loose Coupling
-          <ul>
-            <li>
-              It means two objects are independent and one object can use another object without
-              being dependent on it.
-            </li>
-            <li>Goal of this is to reduce the interdependencies among components of a system</li>
-            <li>
-              And reducing the risk that changes in one component will require changes in any other
-              component.
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="delegates">
-      <ul>
-        <li>
-          A delegate is a type that references to method with a particular parameter list and return
-          type.
-        </li>
-        <li>
-          When we instantiate a delegate, we can associate its instance with any method with a
-          compatible signature and return type.
-        </li>
-        <li>We can invoke (or call) the method through the delegate instance.</li>
-      </ul>
-    </div>
-
-    <div class="content" id="explain-project">
-      <ul>
-        <li>I have done 3 project in my career at Virtusa.</li>
-        <li>Among of them very effective one is Import And Export.</li>
-        <li>
-          It's project for the real estate software solutions provider company called MRI Software.
-        </li>
-        <li>We did this project from the scratch.</li>
-        <li>
-          MRI Software is also a software company that provides real estate and investment
-          management softwares to their customers like real estate owners, investors, and etc.
-        </li>
-        <li>Currently they planned to provide some extra facilities to their customers.</li>
-        <li>
-          The requirment was Import some data from once source and transform the data if needed and
-          Export the data to another source.
-        </li>
-        <li>So full fill this requirment, we had to come up with this solution.</li>
-        <li>The source can be a database or file or APIs</li>
-        <li>
-          Our phase 1 release focus on Extract a large amount of data from an API source and do the
-          transform in ADF and Load the data into a csv file.
-        </li>
-        <li>
-          Technologies
-          <ul>
-            <li>
-              There are 4 main technologies we have used to develop this system.
-              <ol>
-                <li>ASP.NET Core - API</li>
-                <li>Angular - Front End</li>
-                <li>NgRx Data and RxState - State management in Angular</li>
-                <li>Azure Data Factory - ETL tool.</li>
-              </ol>
-            </li>
-            <li>
-              We chose ASP.NET Core for this because, this application needs to run across multiple
-              platforms such as Windows and macOS. And also based on high performance and scalable
-              system, we chose .NET Core for the API implementation.
-            </li>
-            <li>
-              And from the client side we had a requirment to develop a single page application. So
-              based on the current trending and Robust and easyness we chose Angular and for provide
-              responsive performance we had to implement the NgRx/Data for the front-end state
-              management.
-            </li>
-            <li>
-              And for the ETL jobs, we did a POC on ADF and Talend technologies. Based on the
-              performance on large amount of data and pricing and its easy to manage in cloud
-              platform, we chose ADF as the ETL tool for this project.
-            </li>
-          </ul>
-        </li>
-        <li>
-          My Role
-          <ul>
-            <li>
-              I was the only full stack developer in the project who can work on both UI and API.
-            </li>
-            <li>
-              Apart from the project user story works I also regularly used to check the unit test
-              coverage and code smells on our project to deliver a quality product to the client.
-            </li>
-            <li>
-              And also I used to provide some KT sessions also on UI to the newbies who recently
-              joins our project.
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="why-angular">
-      <ul>
-        <li>
-          It's in MVC pattern
-          <ul>
-            <li>
-              It will manage our components and also behaves like a pipeline to connect the
-              components.
-            </li>
-          </ul>
-        </li>
-        <li>
-          It contains directives
-          <ul>
-            <li>Using directives we can apply our own functionalities to the HTML.</li>
-          </ul>
-        </li>
-        <li>
-          Less code
-          <ul>
-            <li>
-              We don't need to write our own MVC pipeline, we don't need to bind the data manually,
-              data-binding does this.
-            </li>
-          </ul>
-        </li>
-        <li>Dependency Injection</li>
-        <li>
-          Unit testing
-          <ul>
-            <li>
-              We can do unit testing by injecting mock data into our controllers and can measure the
-              output and behavior.
-            </li>
-          </ul>
-        </li>
-        <li>Asynchronous programming using RxJS.</li>
-      </ul>
-    </div>
-
-    <div class="content" id="ng-directives">
-      <ul>
-        <li>Directives are Typescript class. Usually is declared with decorator @Directive.</li>
-        <li>
-          We can change the appearance, behavior or a layout of a DOM element using the directives.
-        </li>
-      </ul>
-      <ul>
-        <li>
-          There are different type of directives
-          <ol>
-            <li>
-              Component Directives, contains the details like selector, style, template on component
-              processing, instantiated and uses it at run time.
-            </li>
-            <li>
-              Structure directives, manipulate the DOM elements. Like *ngIf, *ngFor directives.
-            </li>
-            <li>
-              Attribute directives are used to change the look and behavior of the DOM element. We
-              can create our own directives. For Ex: If we need to add specific style classes to and
-              DOM element we can create a directive and inject that directive to our html element.
-            </li>
-          </ol>
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="difficult-situation">
-      <ul>
-        <li>Exaclty around 1 month ago I had to face the probem.</li>
-        <li>
-          I was creating a main feature of our Import Export application that was supposed to launch
-          in two weeks
-        </li>
-        <li>
-          One of our senior QA engineer found a major bug in the application and she wanted to push
-          back on the deadline, which I knew the client wouldn’t appreciate.
-        </li>
-        <li>
-          I understand the QA engineer push to move the deadline but I also knew the client has to
-          have the application running on time.
-        </li>
-        <li>
-          I didn’t want to push her and the team too hard but instead focused on finding out what
-          they need that could help solve the situation.
-        </li>
-        <li>My team were also working hard to fix the other bugs.</li>
-        <li>
-          So, I talked with my team members to put some extra effort on weekends to get this done.
-        </li>
-        <li>And also we can not proceed further without the approvals of senior architects.</li>
-        <li>
-          So I did a discussion with him to give extra effort on weekends and managed to complete
-          the bugs.
-        </li>
-        <li>
-          In the end, the team understood the priorities and we were able to work together to direct
-          resources where they were needed.
-        </li>
-        <li>In the end, we launched the phase 1 release of our application on time</li>
-        <li>And also it caused to increase the client feedback on our team for the realease</li>
-      </ul>
-    </div>
-
-    <div class="content" id="singleton-scoped-transient">
-      <ul>
-        <li>
-          These 3 are define object creation process in ASP.NET MVC core DI when multiple objects of
-          the same type have to be injected
-        </li>
-        <li>
-          In transient, new object instances will be injected in a single request and response. In
-          other words to every controller and every service, a new instance will be provided.
-        </li>
-        <li>
-          In scoped, the same object instance will be injected in a single request and response.
-        </li>
-        <li>
-          In singleton, the same object will be injected across all requests and responses. In this
-          case one global instance of the object will be created.
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="indexes">
-      <ul>
-        <li>
-          Index is a structure that remains in server table or view that can speed up retreive the
-          rows.
-        </li>
-        <li>It contains keys built from one or more columns in the table or view.</li>
-        <li>
-          That enables SQL Server to find the rows associated with the key values quickly and
-          efficiently.
-        </li>
-        <li>
-          Clustered
-          <ul>
-            <li>
-              Clustered indexes do the sorting and storing the data rows in the table or view based
-              on their key values.
-            </li>
-            <li>
-              There can be only one clustered index per table, because rows can only be stored in
-              only one order.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Non-clustered
-          <ul>
-            <li>
-              Nonclustered indexes contains the index key values and those each key values will be
-              pointing to the data row that contains the key value.
-            </li>
-            <li>
-              For Eg: If we have a large set of data in an Employee table with the details of
-              Employee and Salaries.
-              <br />
-              We have a requirement to get the salaried employees between 50000 and 60000. <br />
-              So if we write a normal query, it will go through each row and compare the
-              salaries.<br />
-              But if we create an index on salary column, it will sort it out and it can be quickly
-              retreive the data rows.
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="views">
-      <ul>
-        <li>Views are kind of virtual tables.</li>
-        <li>It can have rows and columns same as real table in the database.</li>
-        <li>
-          We can create a view by selecting fields from one or more tables that are in the database.
-        </li>
-        <li>
-          A View can have all the rows of a table or specific rows based on certain condition.
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="sp-fn-tr">
-      <ol>
-        <li>
-          Stored Procedure
-          <ul>
-            <li>Stored procedure is a set of pre-compiled SQL statements</li>
-            <li>So we can reuse and share with multiple programs.</li>
-            <li>It can read or modify data in a database.</li>
-          </ul>
-        </li>
-        <li>
-          SQL Funcion
-          <ul>
-            <li>SQL function is a database object in SQL Server.</li>
-            <li>
-              Basically, it is a set of SQL statements that will accept input parameters and produce
-              output in the format of single value or tabular form.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Trigger
-          <ul>
-            <li>
-              Trigger is also a set of SQL statements in the database which automatically execute
-              whenever any special event occurs in the database, like insert, delete, update, etc.
-            </li>
-          </ul>
-        </li>
-      </ol>
-      <h3>Difference between them</h3>
-      <table>
-        <thead>
-          <th>Stored Procedure</th>
-          <th>Function</th>
-          <th>Trigger</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>We can execute the stored procedures when required.</td>
-            <td>
-              We can call a function whenever required and Function can't be executed because a
-              function is not in pre-compiled version.
-            </td>
-            <td>
-              Trigger can be executed automatically on specified action on a table like, update,
-              delete, or update.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Stored Procedures can accept any type of parameter. Stored Procedures also accept out
-              parameter.
-            </td>
-            <td>
-              Function also can accept any type of parameter. But function can’t accept out
-              parameter.
-            </td>
-            <td>We can’t pass a parameter to trigger.</td>
-          </tr>
-          <tr>
-            <td>Stored Procedures can or can not be returning any values</td>
-            <td>Function must return any value.</td>
-            <td>Trigger never return value on execution.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="content" id="ng-super">
-      <ul>
-        <li>
-          The super is used to reference base class properties and the base class constructor.
-        </li>
-        <li>It can be only used in constructors of derived classes.</li>
-      </ul>
-    </div>
-
-    <div class="content" id="exception-filter">
-      <ul>
-        <li>
-          In our project we created a ExceptionFilter which inherits from ExceptionFilterAttribute.
-        </li>
-        <li>And it has an overriding method of OnException()</li>
-        <li>
-          Inside that method we handle the exception and provide the message to the front-end in a
-          understandable JSON format.
-        </li>
-        <li>So we configured the exception filter globally using the startup class.</li>
-      </ul>
-    </div>
-
-    <div class="content" id="solid-principles">
-      <ul>
-        <li>
-          SOLID belongs to 5 different types of principles we are using in project architecture
-        </li>
-      </ul>
-      <ol>
-        <li>
-          S: Single Responsibility Principle (SRP)
-          <ul>
-            <li>
-              Single Responsibility Principle says that "Every software module should have only one
-              reason to change".
-            </li>
-            <li>This means that every class, in our code should have only one job to do.</li>
-            <li>Everything in that class should be related to a single purpose.</li>
-            <li>
-              For Eg: If we have 2 requirements like to register the user and send email to the
-              user. <br />
-              In this case we will have 2 seperate services called UserService and EmailService.
-              <br />
-              Not everything in a single file
-            </li>
-          </ul>
-        </li>
-        <li>
-          O: Open/Closed Principle
-          <ul>
-            <li>
-              The Open/closed Principle means "A class is open for extension and closed for
-              modification".
-            </li>
-            <li>
-              "Open for extension" means, we need to design our classes, like a new functionality
-              can be added only when new requirements are needed. (In C# we can use inheritance to
-              do this)
-            </li>
-            <li>
-              "Closed for modification" means we already developed a class and we have written unit
-              testing. <br />
-              We should not modify those classes until we find any bugs. (Default Repository, can
-              accept any type of objects).
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-
-    <div class="content" id="viewbag-viewdata-tempdate">
-      <ul>
-        <li>
-          ViewBag vs ViewData vs TempData
-          <ul>
-            <li>
-              ViewData and ViewBag are used for the same purpose of transfer data from controller to
-              view.
-            </li>
-            <li>
-              ViewData is a dictionary of objects and it is accessible by string as key. Eg:
-              ViewBag["Employee"].
-            </li>
-            <li>ViewBag is able to set and get value dynamically</li>
-            <li>
-              TempData is stored data just like live session for short time. <br />
-              TempData keeps data for the time of HTTP Request. <br />
-              TempData helps us to transfer data between controllers or between actions.
-            </li>
-          </ul>
-          <ul>
-            <li>
-              Comparison
-              <ul>
-                <li>
-                  VD: It is Key-Value Dictionary collection. <br />
-                  VB: It is a type object <br />
-                  TD: It is Key-Value Dictionary collection
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="why-ef">
-      <ul>
-        <li>
-          Entity Framework is an ORM framework that can be used in SQL Server, Oracle, MYSQL etc.
-          <br />
-          It allows us to deal with data as objects or entities.
-        </li>
-        <li>
-          We can use LINQ queries to query the data from the database and retrieve them in a stongly
-          typed way.
-        </li>
-        <li>
-          SQL Injection: SQL syntax by providing some malicious inputs that are used in a query and
-          in parameter names. To avoid this one, you should never combine user inputs with Entity
-          SQL command text. Entity Framework is injection safe since it always generates
-          parameterized SQL commands which help to protect our database against SQL Injection.
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="ng-performance">
-      <ul>
-        <li>
-          First I need to analyze my application and figure out what the areas performing slow.
-        </li>
-        <li>I need to ensure the application follows a clean coding architecture.</li>
-        <li>
-          We can use OnPush change detection strategy. This will update the DOM to reflect the
-          changes whenever the data changes.
-        </li>
-        <li>We can use angular Pure Pipes instead of methods. These are used to format data.</li>
-        <li>
-          We can use Lazy Loading. Becuase in large enterprise applications, once the main bundle
-          starts to increase, the performance goes down. Because every kilo bytes extra on the main
-          bundle is contributing to slower. So, With lazy loading, we can split our application to
-          feature modules and load them whenever it needed.
-        </li>
-        <li>
-          We can use Trackby efficiently in *ngFor directives. That's because, lets say we are using
-          a change detection strategy and we have the list of items in thousands. If we use the
-          *ngFor directive it will render the DOM element for every iteration. But if the list is an
-          observable, what will happens is, if one item added to the list, the *ngFor loop runs and
-          re-render all the elements again. To reduce that we can use Trackby.
-        </li>
-        <li>
-          We can use Resolvers, which will load the next component only if the HTTP call returns
-          success. In case of error, it will not load the next component and displays an error on an
-          already loaded component.
-        </li>
-        <li>
-          It is always a good practice to unsubscribe from observables using the OnDestroy lifecycle
-          hook
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="ng-lifecycle-hooks">
-      <ul>
-        <li>
-          A component has a lifecycle managed by Angular. Angular creates it, renders it, checks it
-          when its data-bound properties change, and destroys it before removing it from the DOM.
-        </li>
-        <li>
-          Eg: OnInit, OnChanges, AfterContentInit, AfterViewInit, OnDestroy
-        </li>
-      </ul>
-    </div>
-    
-    <div class="content" id="how-ng-works">
-      <ul>
-        <li>Every Angular app contains a file angular.json. This file will contain all the configurations of the app. 
-          When we build the app, the builder looks this file to find the entry point of the application.</li>
-      </ul>
-      <li>Each component is declared with three properties:
-        <ol>
-          <li>Selector - used for accessing the component</li>
-          <li>Template/TemplateURL - contains HTML of the component</li>
-          <li>StylesURL - contains component-specific stylesheets</li>
-        </ol>
-      </li>
-    </div>
-    
-    <div class="content" id="ng-modules-components-services">
-      <ul>
-        <li>Components: Declared by @Component decorator. <br> 
-          Components are the basic building blocks, It is controlling a part of the UI for any application.</li>
-        <li>Modules: Declared by @NgModule decorator. Module is a place to group our components, directives, services, and pipes. <br>
-          Module will decide whether the components, directives, etc can be used by other modules. <br>
-          A <span> root module </span> imports BrowserModule (only 1 per app), and a <span> feature module </span> imports CommonModule.</li>
-        <li>Services: Declared by @Injectable decorator. <br> 
-          Services are objects that are instantiated only once during the lifetime of an application. <br>
-          Services are used to share data, functions with different components. <br>
-        </li>
-      </ul>
-    </div>
-
-    <div class="content" id="handle-team-conflicts">
-      <ul>
-        <li>The first thing I do is identify the cause of the issue. </li> 
-        <li>Secondly, I try to bring the concerned parties together for a talk.</li> 
-        <li>My counseling skills come into play during the talk </li> 
-        <li>so the team can reach a peaceful solution</li>
-      </ul>
-    </div>
-    
-    <div class="content" id="passionate-about">
-      <ul>
-        <li>As a software engineer, I’m passionate about creating truly productive, efficient products to make people’s 
-          experience with technology memorable. </li> 
-        <li>One of the things I loved about my last job was witnessing the results of my team’s code update 
-          and watching as our months of work yielded positive client feedback. </li>
-      </ul>
-    </div>
-
-    <div class="content" id="why-want-to-work-here">
-      <ul>
-        <li> I’m impressed by your company’s commitment to the growth and development of its employees. </li>  
-        <li> One of my friends works in your company and he has praised this company for 
-          its excellent treatment of employees for years. </li> 
-        <li> I’m looking for a company that empowers and challenges its employees to be the best professionals they can.</li>
-        <li> In my research, I’ve gone through some of your products like Analytics Center, FaceAuthMe and etc.. and 
-          found that those are very Innovative solutions. </li> 
-        <li> In addition, you have a great reputation for leadership in the industry. </li>
-        <li> This is a company at which I would be honored to grow my career. </li>
-      </ul>
-    </div>
-
-    <div class="content" id="">
-      <ul>
-        <li></li>
       </ul>
     </div>
   </body>
 
   <script>
-    var dotnet = document.getElementById('dotnet');
-    var ng = document.getElementById('angular');
-    var sql = document.getElementById('sql');
-    var personal = document.getElementById('personal');
-    var project = document.getElementById('project');
-    var ef = document.getElementById('ef');
-    var hr = document.getElementById('hr');
+    var dotnet = document.getElementById("dotnet");
+    var ng = document.getElementById("angular");
+    var sql = document.getElementById("sql");
+    var personal = document.getElementById("personal");
+    var project = document.getElementById("project");
+    var ef = document.getElementById("ef");
+    var hr = document.getElementById("hr");
 
     function showDotnet() {
       displayBlock(dotnet);
@@ -1037,47 +216,29 @@
     }
 
     function displayBlock(element) {
-      ng.style.display = 'none';
-      sql.style.display = 'none';
-      dotnet.style.display = 'none';
-      personal.style.display = 'none';
-      project.style.display = 'none';
-      ef.style.display = 'none';
-      hr.style.display = 'none';
-      element.style.display = 'block';
+      ng.style.display = "none";
+      sql.style.display = "none";
+      dotnet.style.display = "none";
+      personal.style.display = "none";
+      project.style.display = "none";
+      ef.style.display = "none";
+      hr.style.display = "none";
+      element.style.display = "block";
     }
 
-    function popup(id) {
-      var win = window.open(
-        '',
-        'Title',
-        'toolbar=no,location=no,directories=no,status=no,menubar=no,' +
-          'scrollbars=yes,resizable=yes,width=' +
+    function load(section, page) {
+      var url = section + "/" + page + ".html";
+      window.open(
+        url,
+        "Title",
+        "toolbar=no,location=no,directories=no,status=no,menubar=no," +
+          "scrollbars=yes,resizable=yes,width=" +
           screen.width / 2 +
-          ',height=' +
+          ",height=" +
           screen.height +
-          ',top=0,left=' +
+          ",top=0,left=" +
           screen.width / 2
       );
-      win.document.body.innerHTML = document.getElementById(id).innerHTML;
-      win.document.body.style = 'font-size: 20px;font-family: arial, sans-serif;';
-      var liTags = win.document.getElementsByTagName('li');
-      for (var i = 0; i < liTags.length; i++) {
-        liTags[i].style = 'padding: 10px';
-      }
-      var tableTags = win.document.getElementsByTagName('table');
-      var tableWidth = screen.width / 2 - 50 + 'px';
-      for (var i = 0; i < tableTags.length; i++) {
-        tableTags[i].style = 'border-collapse: collapse;width:' + tableWidth + ';margin: 20px;';
-      }
-      var tdTags = win.document.getElementsByTagName('td');
-      for (var i = 0; i < tdTags.length; i++) {
-        tdTags[i].style = 'border: 1px solid #dddddd;text-align: left;padding: 10px;';
-      }
-      var thTags = win.document.getElementsByTagName('th');
-      for (var i = 0; i < thTags.length; i++) {
-        thTags[i].style = 'border: 1px solid #dddddd;text-align: left;padding: 10px;';
-      }
     }
   </script>
 </html>

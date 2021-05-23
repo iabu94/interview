@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="solid-principles">
+  <ul>
+    <li>
+      SOLID belongs to 5 different types of principles we are using in project
+      architecture
+    </li>
+  </ul>
+  <ol>
+    <li>
+      S: Single Responsibility Principle (SRP)
+      <ul>
+        <li>
+          Single Responsibility Principle says that "Every software module
+          should have only one reason to change".
+        </li>
+        <li>
+          This means that every class, in our code should have only one job to
+          do.
+        </li>
+        <li>Everything in that class should be related to a single purpose.</li>
+        <li>
+          For Eg: If we have 2 requirements like to register the user and send
+          email to the user. <br />
+          In this case we will have 2 seperate services called UserService and
+          EmailService.
+          <br />
+          Not everything in a single file
+        </li>
+      </ul>
+    </li>
+    <li>
+      O: Open/Closed Principle
+      <ul>
+        <li>
+          The Open/closed Principle means "A class is open for extension and
+          closed for modification".
+        </li>
+        <li>
+          "Open for extension" means, we need to design our classes, like a new
+          functionality can be added only when new requirements are needed. (In
+          C# we can use inheritance to do this)
+        </li>
+        <li>
+          "Closed for modification" means we already developed a class and we
+          have written unit testing. <br />
+          We should not modify those classes until we find any bugs. (Default
+          Repository, can accept any type of objects).
+        </li>
+      </ul>
+    </li>
+  </ol>
+</div>

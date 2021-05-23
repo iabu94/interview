@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="access-modifiers">
+  <ol>
+    <li>
+      Public <br />
+      There are no restrictions on accessing public members. The type/member are
+      accessible for all classes whether it is within the same assembly or
+      another assembly that references it.
+    </li>
+    <li>
+      Private <br />
+      The type/member is only accessible within the same class. We cannot access
+      those outside the class. This is the default access modifier type if no
+      modifier is specified.
+    </li>
+    <li>
+      Protected <br />
+      The type/member is accessible within the class definition and any class
+      that inherits from that class.
+    </li>
+    <li>
+      Internal <br />
+      The type/member can be accessed by any classes in the same assembly, but
+      not from another assembly.
+    </li>
+    <li>
+      Protected Internal <br />
+      The type/member can be accessed by any classes in the current assembly in
+      which it's declared, or from within a derived class in another assembly.
+    </li>
+    <li>
+      Private Protected <br />
+      The type/member can be accessed only within its declaring assembly, by
+      code in the same class or in a type that is derived from that class.
+    </li>
+  </ol>
+</div>

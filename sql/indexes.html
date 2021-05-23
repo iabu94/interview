@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="indexes">
+  <ul>
+    <li>
+      Index is a structure that remains in server table or view that can speed
+      up retreive the rows.
+    </li>
+    <li>
+      It contains keys built from one or more columns in the table or view.
+    </li>
+    <li>
+      That enables SQL Server to find the rows associated with the key values
+      quickly and efficiently.
+    </li>
+    <li>
+      Clustered
+      <ul>
+        <li>
+          Clustered indexes do the sorting and storing the data rows in the
+          table or view based on their key values.
+        </li>
+        <li>
+          There can be only one clustered index per table, because rows can only
+          be stored in only one order.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Non-clustered
+      <ul>
+        <li>
+          Nonclustered indexes contains the index key values and those each key
+          values will be pointing to the data row that contains the key value.
+        </li>
+        <li>
+          For Eg: If we have a large set of data in an Employee table with the
+          details of Employee and Salaries.
+          <br />
+          We have a requirement to get the salaried employees between 50000 and
+          60000. <br />
+          So if we write a normal query, it will go through each row and compare
+          the salaries.<br />
+          But if we create an index on salary column, it will sort it out and it
+          can be quickly retreive the data rows.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

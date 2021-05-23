@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="sp-fn-tr">
+  <ol>
+    <li>
+      Stored Procedure
+      <ul>
+        <li>Stored procedure is a set of pre-compiled SQL statements</li>
+        <li>So we can reuse and share with multiple programs.</li>
+        <li>It can read or modify data in a database.</li>
+      </ul>
+    </li>
+    <li>
+      SQL Funcion
+      <ul>
+        <li>SQL function is a database object in SQL Server.</li>
+        <li>
+          Basically, it is a set of SQL statements that will accept input
+          parameters and produce output in the format of single value or tabular
+          form.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Trigger
+      <ul>
+        <li>
+          Trigger is also a set of SQL statements in the database which
+          automatically execute whenever any special event occurs in the
+          database, like insert, delete, update, etc.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h3>Difference between them</h3>
+  <table>
+    <thead>
+      <th>Stored Procedure</th>
+      <th>Function</th>
+      <th>Trigger</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>We can execute the stored procedures when required.</td>
+        <td>
+          We can call a function whenever required and Function can't be
+          executed because a function is not in pre-compiled version.
+        </td>
+        <td>
+          Trigger can be executed automatically on specified action on a table
+          like, update, delete, or update.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Stored Procedures can accept any type of parameter. Stored Procedures
+          also accept out parameter.
+        </td>
+        <td>
+          Function also can accept any type of parameter. But function can’t
+          accept out parameter.
+        </td>
+        <td>We can’t pass a parameter to trigger.</td>
+      </tr>
+      <tr>
+        <td>Stored Procedures can or can not be returning any values</td>
+        <td>Function must return any value.</td>
+        <td>Trigger never return value on execution.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="onion-architecture">
+  <ul>
+    <li>
+      The main aim of onion-architecture is to address the challenges faced with
+      other architectures and to provide a solution for common problems like
+      tight coupling and loose coupling.
+    </li>
+    <li>
+      The overall usage of the Onion Architecture is to keep the business logic,
+      data access logic, and model in the middle of the application
+      <br />
+      and push the dependencies as far outward as possible means all coupling
+      towards to center.
+    </li>
+    <li>
+      Layers
+      <ul>
+        <li>Domain Entities Layer: used to create a table in the database.</li>
+        <li>
+          Repository Layer: acts as an abstract layer between the data access
+          and business layer.
+        </li>
+        <li>Service Layer: the business logic for an entity.</li>
+        <li>
+          UI (Web/Unit Test) Layer: implementation of DI (Dependency Inversion)
+          principle.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Advantages of Onion Architecture
+      <ul>
+        <li>
+          Better maintainability as all the codes depend on layers or the
+          center.
+        </li>
+        <li>
+          Better testability as the unit test can be created for separate layers
+          without an effect of other modules of the application.
+        </li>
+        <li>
+          It develops a loosely coupled application as the outer layer of the
+          application always communicates with the inner layer via interfaces.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Tight Coupling
+      <ul>
+        <li>
+          When a class is dependent on a concrete dependency, it is called as
+          tightly coupled to that class.
+        </li>
+        <li>A tightly coupled object is dependent on another object;</li>
+        <li>
+          That means changing one object in a tightly coupled application, can
+          be requires changes to a number of other objects.
+        </li>
+        <li>
+          It is not difficult when an application is small but in an
+          enterprise-level application, it is too difficult to make the changes.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Loose Coupling
+      <ul>
+        <li>
+          It means two objects are independent and one object can use another
+          object without being dependent on it.
+        </li>
+        <li>
+          Goal of this is to reduce the interdependencies among components of a
+          system
+        </li>
+        <li>
+          And reducing the risk that changes in one component will require
+          changes in any other component.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

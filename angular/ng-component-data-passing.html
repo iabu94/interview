@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="ng-component-data-passing">
+  <ul>
+    <li>
+      There are different ways to pass the data between components in different
+      scenaios.
+    </li>
+    <li>
+      If we have a Parent to Child relationship between our components we can
+      Share the Data via Input
+    </li>
+    <li>
+      If we have Child to Parent relationship we can Share Data via Output() and
+      EventEmitter. Other than that we also can use ViewChild. It allows a one
+      component to be injected into another, giving the parent access to its
+      attributes and functions. In this case we need a lifecycle hook
+      ngAfterViewInit()
+    </li>
+    <li>
+      When we don't have a relationship between the components we can share the
+      data with a Service. In this case Subjects are useful.
+    </li>
+    <li>
+      Other than that we can use Resolvers and Activated route data to access
+      the data when we do the routings.
+    </li>
+  </ul>
+</div>

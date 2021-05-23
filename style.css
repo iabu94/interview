@@ -4,7 +4,10 @@
 #personal,
 #project,
 #hr,
-#ef {
+#ef,
+#agile,
+#dotnetcore,
+#dotnetmvc {
   display: none;
   padding: 10px;
   font-size: 20px;

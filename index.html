@@ -17,6 +17,11 @@
       <button onclick="showEf()">EF</button>
       <button onclick="showHR()">HR</button>
     </div>
+    <div class="flex-container">
+      <button onclick="showAgile()">Agile</button>
+      <button style="width: 110px" onclick="showNetCore()">.Net Core</button>
+      <button style="width: 110px" onclick="showNetMvc()">.Net MVC</button>
+    </div>
 
     <div id="dotnet">
       <ul>
@@ -39,25 +44,9 @@
         <li>
           <a href="#" onclick="load('dotnet', 'oop')">OOP Concepts in C#</a>
         </li>
-      </ul>
-      <h3>.Net Core</h3>
-      <ul>
         <li>
-          <a href="#" onclick="load('dotnet', 'singleton-scoped-transient')"
-            >Singleton vs Scoped vs Transient</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnet', 'exception-filter')"
-            >Exception Filter</a
-          >
-        </li>
-      </ul>
-      <h3>MVC</h3>
-      <ul>
-        <li>
-          <a href="#" onclick="load('dotnet', 'viewbag-viewdata-tempdate')"
-            >ViewBag vs ViewData vs TempData</a
+          <a href="#" onclick="load('dotnet', 'lambda')"
+            >Lambda expressions in C#...?</a
           >
         </li>
       </ul>
@@ -176,6 +165,41 @@
         </li>
       </ul>
     </div>
+
+    <div id="agile">
+      <ul>
+        <li>
+          <a href="#" onclick="load('agile', 'pair-programming')"
+            >What is pair programming...?</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div id="dotnetcore">
+      <ul>
+        <li>
+          <a href="#" onclick="load('dotnetcore', 'singleton-scoped-transient')"
+            >Singleton vs Scoped vs Transient</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="load('dotnetcore', 'exception-filter')"
+            >Exception Filter</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div id="dotnetmvc">
+      <ul>
+        <li>
+          <a href="#" onclick="load('dotnetmvc', 'viewbag-viewdata-tempdate')"
+            >ViewBag vs ViewData vs TempData</a
+          >
+        </li>
+      </ul>
+    </div>
   </body>
 
   <script>
@@ -186,6 +210,9 @@
     var project = document.getElementById("project");
     var ef = document.getElementById("ef");
     var hr = document.getElementById("hr");
+    var agile = document.getElementById("agile");
+    var dotnetcore = document.getElementById("dotnetcore");
+    var dotnetmvc = document.getElementById("dotnetmvc");
 
     function showDotnet() {
       displayBlock(dotnet);
@@ -215,6 +242,18 @@
       displayBlock(hr);
     }
 
+    function showAgile() {
+      displayBlock(agile);
+    }
+
+    function showNetCore() {
+      displayBlock(dotnetcore);
+    }
+
+    function showNetMvc() {
+      displayBlock(dotnetmvc);
+    }
+
     function displayBlock(element) {
       ng.style.display = "none";
       sql.style.display = "none";
@@ -223,6 +262,9 @@
       project.style.display = "none";
       ef.style.display = "none";
       hr.style.display = "none";
+      agile.style.display = "none";
+      dotnetcore.style.display = "none";
+      dotnetmvc.style.display = "none";
       element.style.display = "block";
     }
 

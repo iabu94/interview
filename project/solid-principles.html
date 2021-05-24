@@ -11,15 +11,15 @@
     <li>
       S: Single Responsibility Principle (SRP)
       <ul>
+        <li>A class should have a single responsibility.</li>
         <li>
-          Single Responsibility Principle says that "Every software module
-          should have only one reason to change".
+          It means "Every software module should have only one reason to
+          change".
         </li>
         <li>
           This means that every class, in our code should have only one job to
           do.
         </li>
-        <li>Everything in that class should be related to a single purpose.</li>
         <li>
           For Eg: If we have 2 requirements like to register the user and send
           email to the user. <br />
@@ -27,6 +27,11 @@
           EmailService.
           <br />
           Not everything in a single file
+        </li>
+        <li>
+          We are using this principle because, to separate behaviours so that if
+          any bugs comes in coz one of our change change, it won’t affect other
+          unrelated behaviours.
         </li>
       </ul>
     </li>
@@ -38,16 +43,36 @@
           closed for modification".
         </li>
         <li>
-          "Open for extension" means, we need to design our classes, like a new
-          functionality can be added only when new requirements are needed. (In
-          C# we can use inheritance to do this)
+          Changing the current behaviour of a Class will affect all the systems
+          using that Class.
         </li>
         <li>
-          "Closed for modification" means we already developed a class and we
-          have written unit testing. <br />
-          We should not modify those classes until we find any bugs. (Default
-          Repository, can accept any type of objects).
+          If we want the Class to perform more functions, the approach is to add
+          to the functions that already exist NOT change them. (Simply we can
+          extend the class)
         </li>
+      </ul>
+    </li>
+    <li>
+      L: Liskov Substitution
+      <ul>
+        <li>Lets say we have a class A and a class B.</li>
+        <li>
+          if class A is a subtype of class B, we should be able to replace B
+          with A without disrupting the behavior of our program.
+        </li>
+        <li>(implements)</li>
+      </ul>
+    </li>
+    <li>
+      I: Interface Segregation
+      <ul>
+        <li>
+          larger interfaces should be split into smaller ones. By doing so, we
+          can ensure that implementing classes only need to be concerned about
+          the methods that are of interest to them.
+        </li>
+        <li>Multiple inheritance</li>
       </ul>
     </li>
   </ol>

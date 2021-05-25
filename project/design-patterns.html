@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="design-patterns">
+  <ul>
+    <li><b>Unit Of Work Pattern</b></li>
+    <li>
+      If we use separate repositories for a single transaction can do partial
+      updates.
+    </li>
+    <li>
+      For example, If we have to update two different entity types as part of
+      the same transaction.
+    </li>
+    <li>
+      If each uses a separate database context instance, one might succeed and
+      the other might fail.
+    </li>
+    <li>
+      So that we have to ensure that all repositories use the same database
+      context
+    </li>
+    <li><b>Repository Pattern</b></li>
+    <li>
+      The repository pattern creates the abstraction between database access and
+      business logic.
+    </li>
+    <li>
+      Instead of writing entire data access logic on the controller, it’s better
+      to write this logic in a different class called a repository.
+    </li>
+    <li>This will make our code more maintainable and understandable.</li>
+    <li>
+      <b>Singleton Pattern</b>
+    </li>
+    <li>
+      he singleton pattern is a software design pattern that restricts the
+      instantiation of a class to one "single" instance. This is useful when
+      exactly one object is needed to coordinate actions across the system.
+    </li>
+  </ul>
+</div>

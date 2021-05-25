@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="best-practices">
+  <ul>
+    <li>
+      <b>Startup class and the service Configuration </b>
+    </li>
+    <li>
+      The best practice is to keep the ConfigureServices method clean and
+      readable. we can use extensions methods when we had to register a lot of
+      services.
+    </li>
+    <li><b>Environment based setting</b></li>
+    <li>
+      Having a separate configuration for each environment is always good
+      practice.
+    </li>
+    <li>
+      Also after published our application we have to do update or fix some bugs
+      according to requirements, then we have to do all of these things in the
+      development environment. If we do this we don’t have to change settings in
+      one file for each environment.
+    </li>
+    <li><b>Clean controllers</b></li>
+    <li>Controllers should always be clean and readable.</li>
+    <li>we shouldn’t place any business logic inside it.</li>
+    <li>
+      To avoid create business logic inside controllers, we can use repository
+      pattern.
+    </li>
+    <li><b>Routing Naming</b></li>
+    <li>
+      We can use descriptive names for our actions, but for the
+      routes/endpoints, we should use NOUNS and not VERBS.
+    </li>
+    <li><b>Avoid writing boilerplate code to map objects</b></li>
+    <li>In this case we can use Automapper.</li>
+  </ul>
+</div>

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="../style.css" />
+
+<div class="content" id="exception-handling">
+  <ul>
+    <li>
+      Exception handling is one of the most important features of any
+      application.
+    </li>
+    <li>
+      ASP.NET Core contains a middleware that makes exception handling easy.
+    </li>
+    <li>
+      By default, ASP.NET Core returns a simple status code for any exception
+      that occurs in an application. Middleware makes exeception handling very
+      easy
+    </li>
+    <li>
+      In our application we handled the exception using custom middleware.
+    </li>
+    <li>To do this, we created a class called ExceptionMiddleware.</li>
+    <li>
+      Inside the middleware we initialized RequestDelegate and ILogger for our
+      ExceptionMiddleware
+    </li>
+    <li>
+      Inside the invoke method we added a try catch block. Within try block we
+      invoke the RequestDelegate with the current context
+    </li>
+    <li>
+      Withing the catch block, we generate a GUID for the error. We log the eror
+      with the unique GUID.
+    </li>
+    <li>
+      And finaly we return the error response to the user with the JSON format.
+    </li>
+  </ul>
+</div>

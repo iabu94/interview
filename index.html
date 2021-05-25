@@ -10,7 +10,7 @@
 
     <div class="flex-container">
       <button onclick="showPersonal()">Personal</button>
-      <button onclick="showDotnet()">C#</button>
+      <button onclick="showCSharp()">C#</button>
       <button onclick="showAngular()">Angular</button>
       <button onclick="showSQL()">SQL</button>
       <button onclick="showProject()">Project</button>
@@ -47,6 +47,11 @@
         <li>
           <a href="#" onclick="load('csharp', 'lambda')"
             >Lambda expressions in C#...?</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="load('csharp', 'extension-method')"
+            >Extension methods</a
           >
         </li>
       </ul>
@@ -238,7 +243,7 @@
     var dotnetcore = document.getElementById("dotnetcore");
     var dotnetmvc = document.getElementById("dotnetmvc");
 
-    function showDotnet() {
+    function showCSharp() {
       displayBlock(csharp);
     }
 

@@ -10,7 +10,7 @@
 
     <div class="flex-container">
       <button onclick="showPersonal()">Personal</button>
-      <button onclick="showDotnet()">.Net</button>
+      <button onclick="showDotnet()">C#</button>
       <button onclick="showAngular()">Angular</button>
       <button onclick="showSQL()">SQL</button>
       <button onclick="showProject()">Project</button>
@@ -23,29 +23,29 @@
       <button style="width: 110px" onclick="showNetMvc()">.Net MVC</button>
     </div>
 
-    <div id="dotnet">
+    <div id="csharp">
       <ul>
         <li>
-          <a href="#" onclick="load('dotnet', 'abstract-interface')"
+          <a href="#" onclick="load('csharp', 'abstract-interface')"
             >Abstract vs Interface</a
           >
         </li>
         <li>
-          <a href="#" onclick="load('dotnet', 'access-modifiers')"
+          <a href="#" onclick="load('csharp', 'access-modifiers')"
             >Access Modifiers</a
           >
         </li>
         <li>
-          <a href="#" onclick="load('dotnet', 'class-types')"
+          <a href="#" onclick="load('csharp', 'class-types')"
             >Class Types (Sealed, Static, Abstract)</a
           >
         </li>
-        <li><a href="#" onclick="load('dotnet', 'delegates')">Delegates</a></li>
+        <li><a href="#" onclick="load('csharp', 'delegates')">Delegates</a></li>
         <li>
-          <a href="#" onclick="load('dotnet', 'oop')">OOP Concepts in C#</a>
+          <a href="#" onclick="load('csharp', 'oop')">OOP Concepts in C#</a>
         </li>
         <li>
-          <a href="#" onclick="load('dotnet', 'lambda')"
+          <a href="#" onclick="load('csharp', 'lambda')"
             >Lambda expressions in C#...?</a
           >
         </li>
@@ -227,7 +227,7 @@
   </body>
 
   <script>
-    var dotnet = document.getElementById("dotnet");
+    var csharp = document.getElementById("csharp");
     var ng = document.getElementById("angular");
     var sql = document.getElementById("sql");
     var personal = document.getElementById("personal");
@@ -239,7 +239,7 @@
     var dotnetmvc = document.getElementById("dotnetmvc");
 
     function showDotnet() {
-      displayBlock(dotnet);
+      displayBlock(csharp);
     }
 
     function showAngular() {
@@ -281,7 +281,7 @@
     function displayBlock(element) {
       ng.style.display = "none";
       sql.style.display = "none";
-      dotnet.style.display = "none";
+      csharp.style.display = "none";
       personal.style.display = "none";
       project.style.display = "none";
       ef.style.display = "none";

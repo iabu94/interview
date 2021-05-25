@@ -19,16 +19,20 @@
     </li>
     <li>To do this, we created a class called ExceptionMiddleware.</li>
     <li>
-      Inside the middleware we initialized RequestDelegate and ILogger for our
+      Inside that initialized RequestDelegate and ILogger for our
       ExceptionMiddleware
     </li>
     <li>
-      Inside the invoke method we added a try catch block. Within try block we
-      invoke the RequestDelegate with the current context
+      Inside the invoke method we added a try catch block. In the try block we
+      just passed the method of the RequestDelegate with the current context.
     </li>
     <li>
       Withing the catch block, we generate a GUID for the error. We log the eror
       with the unique GUID.
+    </li>
+    <li>
+      So, when we need to check a specific exception that has occured after the
+      deployment, we can query the azure logs with our unique error id.
     </li>
     <li>
       And finaly we return the error response to the user with the JSON format.

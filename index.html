@@ -1,330 +1,277 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Interview Questions and Answers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h4 style="text-align: center">Interview Questions and Answers</h4>
 
-    <div class="flex-container">
-      <button onclick="showPersonal()">Personal</button>
-      <button onclick="showCSharp()">C#</button>
-      <button onclick="showAngular()">Angular</button>
-      <button onclick="showSQL()">SQL</button>
-      <button onclick="showProject()">Project</button>
-      <button onclick="showEf()">EF</button>
-      <button onclick="showHR()">HR</button>
-    </div>
-    <div class="flex-container">
-      <button onclick="showAgile()">Agile</button>
-      <button style="width: 110px" onclick="showNetCore()">.Net Core</button>
-      <button style="width: 110px" onclick="showNetMvc()">.Net MVC</button>
-    </div>
+<head>
+  <title>Interview Questions and Answers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <div id="csharp">
-      <ul>
-        <li>
-          <a href="#" onclick="load('csharp', 'abstract-interface')"
-            >Abstract vs Interface</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('csharp', 'access-modifiers')"
-            >Access Modifiers</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('csharp', 'class-types')"
-            >Class Types (Sealed, Static, Abstract)</a
-          >
-        </li>
-        <li><a href="#" onclick="load('csharp', 'delegates')">Delegates</a></li>
-        <li>
-          <a href="#" onclick="load('csharp', 'oop')">OOP Concepts in C#</a>
-        </li>
-        <li>
-          <a href="#" onclick="load('csharp', 'lambda')"
-            >Lambda expressions in C#...?</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('csharp', 'extension-method')"
-            >Extension methods</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('csharp', 'best-practices')"
-            >Best Practices</a
-          >
-        </li>
-      </ul>
-    </div>
+<body>
+  <h4 style="text-align: center">Interview Questions and Answers</h4>
 
-    <div id="angular">
-      <ul>
-        <li>
-          <a href="#" onclick="load('angular', 'why-angular')">Why Angular?</a>
-        </li>
-        <li>
-          <a href="#" onclick="load('angular', 'how-ng-works')"
-            >How does Angular works?</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('angular', 'ng-directives')">Directives</a>
-        </li>
-        <li><a href="#" onclick="load('angular', 'ng-super')">Super</a></li>
-        <li>
-          <a href="#" onclick="load('angular', 'ng-performance')"
-            >How to improve the performance?</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            onclick="load('angular', 'ng-modules-components-services')"
-            >Modules and Components and Services</a
-          >
-        </li>
-        <li><a href="#" onclick="load('angular', 'ng-pipes')">PIPES</a></li>
-        <li>
-          <a href="#" onclick="load('angular', 'ng-component-data-passing')"
-            >How to pass data within components</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('angular', 'lazy-loading')">Lazy Loading</a>
-        </li>
-      </ul>
-    </div>
+  <div class="flex-container">
+    <button onclick="showPersonal()">Personal</button>
+    <button onclick="showCSharp()">C#</button>
+    <button onclick="showAngular()">Angular</button>
+    <button onclick="showSQL()">SQL</button>
+    <button onclick="showProject()">Project</button>
+    <button onclick="showEf()">EF</button>
+    <button onclick="showHR()">HR</button>
+  </div>
+  <div class="flex-container">
+    <button onclick="showAgile()">Agile</button>
+    <button style="width: 110px" onclick="showNetCore()">.Net Core</button>
+    <button style="width: 110px" onclick="showNetMvc()">.Net MVC</button>
+  </div>
 
-    <div id="sql">
-      <ul>
-        <li><a href="#" onclick="load('sql', 'indexes')">Indexes</a></li>
-        <li><a href="#" onclick="load('sql', 'views')">Views</a></li>
-        <li>
-          <a href="#" onclick="load('sql', 'sp-fn-tr')"
-            >Stored Procedures vs Functions vs Triggers</a
-          >
-        </li>
-      </ul>
-    </div>
+  <div id="csharp">
+    <ul>
+      <li>
+        <a href="#" onclick="load('csharp', 'abstract-interface')">Abstract vs Interface</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('csharp', 'access-modifiers')">Access Modifiers</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('csharp', 'class-types')">Class Types (Sealed, Static, Abstract)</a>
+      </li>
+      <li><a href="#" onclick="load('csharp', 'delegates')">Delegates</a></li>
+      <li>
+        <a href="#" onclick="load('csharp', 'oop')">OOP Concepts in C#</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('csharp', 'lambda')">Lambda expressions in C#...?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('csharp', 'extension-method')">Extension methods</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('csharp', 'best-practices')">Best Practices</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="personal" style="display: block">
-      <ul>
-        <li>
-          <a href="#" onclick="load('personal', 'tell-about-self')"
-            >Tell me about yourself</a
-          >
-        </li>
-      </ul>
-    </div>
+  <div id="angular">
+    <ul>
+      <li>
+        <a href="#" onclick="load('angular', 'why-angular')">Why Angular?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('angular', 'how-ng-works')">How does Angular works?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('angular', 'ng-directives')">Directives</a>
+      </li>
+      <li><a href="#" onclick="load('angular', 'ng-super')">Super</a></li>
+      <li>
+        <a href="#" onclick="load('angular', 'ng-performance')">How to improve the performance?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('angular', 'ng-modules-components-services')">Modules and Components and Services</a>
+      </li>
+      <li><a href="#" onclick="load('angular', 'ng-pipes')">PIPES</a></li>
+      <li>
+        <a href="#" onclick="load('angular', 'ng-component-data-passing')">How to pass data within components</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('angular', 'lazy-loading')">Lazy Loading</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="project">
-      <ul>
-        <li>
-          <a href="#" onclick="load('project', 'explain-project')"
-            >Explain the Project and Your Role</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('project', 'onion-architecture')"
-            >Onion Architecture</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('project', 'solid-principles')"
-            >SOLID Principles</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('project', 'design-patterns')"
-            >Design Patterns</a
-          >
-        </li>
-      </ul>
-    </div>
+  <div id="sql">
+    <ul>
+      <li><a href="#" onclick="load('sql', 'indexes')">Indexes</a></li>
+      <li><a href="#" onclick="load('sql', 'views')">Views</a></li>
+      <li><a href="#" onclick="load('sql', 'primaryvsunique')">Primary key vs Unique key</a></li>
+      <li>
+        <a href="#" onclick="load('sql', 'sp-fn-tr')">Stored Procedures vs Functions vs Triggers</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="ef">
-      <ul>
-        <li>
-          <a href="#" onclick="load('ef', 'why-ef')">Why Entity Framework ?</a>
-        </li>
-        <li>
-          <a href="#" onclick="load('ef', 'linq')">What is LINQ ?</a>
-        </li>
-      </ul>
-    </div>
+  <div id="personal" style="display: block">
+    <ul>
+      <li>
+        <a href="#" onclick="load('personal', 'tell-about-self')">Tell me about yourself</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="hr">
-      <ul>
-        <li>
-          <a href="#" onclick="load('hr', 'handle-team-conflicts')"
-            >How have you handled conflicts within a project team you are
-            leading ?</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('hr','passionate-about')"
-            >What are you passionate about ?</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('hr', 'why-want-to-work-here')"
-            >Why do you want to work here ?</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('hr', 'difficult-situation')"
-            >Difficult Situation Faced on Project</a
-          >
-        </li>
-      </ul>
-    </div>
+  <div id="project">
+    <ul>
+      <li>
+        <a href="#" onclick="load('project', 'explain-project')">Explain the Project and Your Role</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('project', 'onion-architecture')">Onion Architecture</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('project', 'solid-principles')">SOLID Principles</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('project', 'design-patterns')">Design Patterns</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="agile">
-      <ul>
-        <li>
-          <a href="#" onclick="load('agile', 'pair-programming')"
-            >What is pair programming...?</a
-          >
-        </li>
-      </ul>
-    </div>
+  <div id="ef">
+    <ul>
+      <li>
+        <a href="#" onclick="load('ef', 'why-ef')">Why Entity Framework ?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('ef', 'linq')">What is LINQ ?</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="dotnetcore">
-      <ul>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'singleton-scoped-transient')"
-            >Singleton vs Scoped vs Transient</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'exception-handling')"
-            >Exception Handling</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'advantages')"
-            >Advantages of .NET Core over .NET</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'startup')">Startup.cs</a>
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'configure-services')"
-            >ConfigureServices method</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'configure')"
-            >Configure method</a
-          >
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'middleware')">Middleware</a>
-        </li>
-        <li>
-          <a href="#" onclick="load('dotnetcore', 'best-practices')"
-            >Best practices</a
-          >
-        </li>
-      </ul>
-    </div>
+  <div id="hr">
+    <ul>
+      <li>
+        <a href="#" onclick="load('hr', 'handle-team-conflicts')">How have you handled conflicts within a project team
+          you are
+          leading ?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('hr','passionate-about')">What are you passionate about ?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('hr', 'why-want-to-work-here')">Why do you want to work here ?</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('hr', 'difficult-situation')">Difficult Situation Faced on Project</a>
+      </li>
+    </ul>
+  </div>
 
-    <div id="dotnetmvc">
-      <ul>
-        <li>
-          <a href="#" onclick="load('dotnetmvc', 'viewbag-viewdata-tempdate')"
-            >ViewBag vs ViewData vs TempData</a
-          >
-        </li>
-      </ul>
-    </div>
-  </body>
+  <div id="agile">
+    <ul>
+      <li>
+        <a href="#" onclick="load('agile', 'pair-programming')">What is pair programming...?</a>
+      </li>
+    </ul>
+  </div>
 
-  <script>
-    var csharp = document.getElementById("csharp");
-    var ng = document.getElementById("angular");
-    var sql = document.getElementById("sql");
-    var personal = document.getElementById("personal");
-    var project = document.getElementById("project");
-    var ef = document.getElementById("ef");
-    var hr = document.getElementById("hr");
-    var agile = document.getElementById("agile");
-    var dotnetcore = document.getElementById("dotnetcore");
-    var dotnetmvc = document.getElementById("dotnetmvc");
+  <div id="dotnetcore">
+    <ul>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'singleton-scoped-transient')">Singleton vs Scoped vs Transient</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'exception-handling')">Exception Handling</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'advantages')">Advantages of .NET Core over .NET</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'startup')">Startup.cs</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'configure-services')">ConfigureServices method</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'configure')">Configure method</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'middleware')">Middleware</a>
+      </li>
+      <li>
+        <a href="#" onclick="load('dotnetcore', 'best-practices')">Best practices</a>
+      </li>
+    </ul>
+  </div>
 
-    function showCSharp() {
-      displayBlock(csharp);
-    }
+  <div id="dotnetmvc">
+    <ul>
+      <li>
+        <a href="#" onclick="load('dotnetmvc', 'viewbag-viewdata-tempdate')">ViewBag vs ViewData vs TempData</a>
+      </li>
+    </ul>
+  </div>
+</body>
 
-    function showAngular() {
-      displayBlock(ng);
-    }
+<script>
+  var csharp = document.getElementById("csharp");
+  var ng = document.getElementById("angular");
+  var sql = document.getElementById("sql");
+  var personal = document.getElementById("personal");
+  var project = document.getElementById("project");
+  var ef = document.getElementById("ef");
+  var hr = document.getElementById("hr");
+  var agile = document.getElementById("agile");
+  var dotnetcore = document.getElementById("dotnetcore");
+  var dotnetmvc = document.getElementById("dotnetmvc");
 
-    function showSQL() {
-      displayBlock(sql);
-    }
+  function showCSharp() {
+    displayBlock(csharp);
+  }
 
-    function showPersonal() {
-      displayBlock(personal);
-    }
+  function showAngular() {
+    displayBlock(ng);
+  }
 
-    function showProject() {
-      displayBlock(project);
-    }
+  function showSQL() {
+    displayBlock(sql);
+  }
 
-    function showEf() {
-      displayBlock(ef);
-    }
+  function showPersonal() {
+    displayBlock(personal);
+  }
 
-    function showHR() {
-      displayBlock(hr);
-    }
+  function showProject() {
+    displayBlock(project);
+  }
 
-    function showAgile() {
-      displayBlock(agile);
-    }
+  function showEf() {
+    displayBlock(ef);
+  }
 
-    function showNetCore() {
-      displayBlock(dotnetcore);
-    }
+  function showHR() {
+    displayBlock(hr);
+  }
 
-    function showNetMvc() {
-      displayBlock(dotnetmvc);
-    }
+  function showAgile() {
+    displayBlock(agile);
+  }
 
-    function displayBlock(element) {
-      ng.style.display = "none";
-      sql.style.display = "none";
-      csharp.style.display = "none";
-      personal.style.display = "none";
-      project.style.display = "none";
-      ef.style.display = "none";
-      hr.style.display = "none";
-      agile.style.display = "none";
-      dotnetcore.style.display = "none";
-      dotnetmvc.style.display = "none";
-      element.style.display = "block";
-    }
+  function showNetCore() {
+    displayBlock(dotnetcore);
+  }
 
-    function load(section, page) {
-      var url = section + "/" + page + ".html";
-      window.open(
-        url,
-        "Title",
-        "toolbar=no,location=no,directories=no,status=no,menubar=no," +
-          "scrollbars=yes,resizable=yes,width=" +
-          screen.width / 2 +
-          ",height=" +
-          screen.height +
-          ",top=0,left=" +
-          screen.width / 2
-      );
-    }
-  </script>
+  function showNetMvc() {
+    displayBlock(dotnetmvc);
+  }
+
+  function displayBlock(element) {
+    ng.style.display = "none";
+    sql.style.display = "none";
+    csharp.style.display = "none";
+    personal.style.display = "none";
+    project.style.display = "none";
+    ef.style.display = "none";
+    hr.style.display = "none";
+    agile.style.display = "none";
+    dotnetcore.style.display = "none";
+    dotnetmvc.style.display = "none";
+    element.style.display = "block";
+  }
+
+  function load(section, page) {
+    var url = section + "/" + page + ".html";
+    window.open(
+      url,
+      "Title",
+      "toolbar=no,location=no,directories=no,status=no,menubar=no," +
+      "scrollbars=yes,resizable=yes,width=" +
+      screen.width / 2 +
+      ",height=" +
+      screen.height +
+      ",top=0,left=" +
+      screen.width / 2
+    );
+  }
+</script>
+
 </html>
